@@ -1,16 +1,6 @@
 #! /usr/bin/env python3
 
-###
-# KINOVA (R) KORTEX (TM)
-#
-# Copyright (c) 2018 Kinova inc. All rights reserved.
-#
-# This software may be modified and distributed
-# under the terms of the BSD 3-Clause license.
-#
-# Refer to the LICENSE file for details.
-#
-###
+# Exemplo desenvolvido com o intuito de treinar as funcionalidades da api
 
 import sys
 import os
@@ -21,6 +11,8 @@ from kortex_api.autogen.client_stubs.BaseClientRpc import BaseClient
 from kortex_api.autogen.client_stubs.BaseCyclicClientRpc import BaseCyclicClient
 
 from kortex_api.autogen.messages import Base_pb2, BaseCyclic_pb2, Common_pb2
+
+from api_python.examples import utilities
 
 # Maximum allowed waiting time during actions (in seconds)
 TIMEOUT_DURATION = 20
@@ -39,10 +31,8 @@ def check_for_end_or_abort(e):
     """
 
     def check(notification, e=e):
-        print("EVENT : " + \
-              Base_pb2.ActionEvent.Name(notification.action_event))
-        if notification.action_event == Base_pb2.ACTION_END \
-                or notification.action_event == Base_pb2.ACTION_ABORT:
+        print("EVENT : " + Base_pb2.ActionEvent.Name(notification.action_event))
+        if notification.action_event == Base_pb2.ACTION_END or notification.action_event == Base_pb2.ACTION_ABORT:
             e.set()
 
     return check
@@ -72,7 +62,7 @@ def check_for_sequence_end_or_abort(e):
     return check
 
 
-def create_angular_action(actuator_count):
+def create_angular_action(actuator_count, joint_values):
     print("Creating angular action")
     action = Base_pb2.Action()
     action.name = "Example angular action"
@@ -80,31 +70,12 @@ def create_angular_action(actuator_count):
 
     for joint_id in range(actuator_count):
         joint_angle = action.reach_joint_angles.joint_angles.joint_angles.add()
-        joint_angle.value = 0.0
+        joint_angle.value = joint_values[joint_id]
 
     return action
 
 
-def create_cartesian_action(base_cyclic):
-    print("Creating Cartesian action")
-    action = Base_pb2.Action()
-    action.name = "Example Cartesian action"
-    action.application_data = ""
-
-    feedback = base_cyclic.RefreshFeedback()
-
-    cartesian_pose = action.reach_pose.target_pose
-    cartesian_pose.x = feedback.base.tool_pose_x  # (meters)
-    cartesian_pose.y = feedback.base.tool_pose_y - 0.1  # (meters)
-    cartesian_pose.z = feedback.base.tool_pose_z - 0.2  # (meters)
-    cartesian_pose.theta_x = feedback.base.tool_pose_theta_x  # (degrees)
-    cartesian_pose.theta_y = feedback.base.tool_pose_theta_y  # (degrees)
-    cartesian_pose.theta_z = feedback.base.tool_pose_theta_z  # (degrees)
-
-    return action
-
-
-def example_move_to_home_position(base):
+def move_to_position(base, position):
     # Make sure the arm is in Single Level Servoing mode
     base_servo_mode = Base_pb2.ServoingModeInformation()
     base_servo_mode.servoing_mode = Base_pb2.SINGLE_LEVEL_SERVOING
@@ -117,10 +88,14 @@ def example_move_to_home_position(base):
     action_list = base.ReadAllActions(action_type)
     action_handle = None
     for action in action_list.action_list:
-        if action.name == "Home":
+        if action.name == "Home" and position == "Home":
+            action_handle = action.handle
+        if action.name == "Retract" and position == "Retract":
+            action_handle = action.handle
+        if action.name == "Zero" and position == "Zero":
             action_handle = action.handle
 
-    if action_handle == None:
+    if action_handle is None:
         print("Can't reach safe position. Exiting")
         return False
 
@@ -141,95 +116,37 @@ def example_move_to_home_position(base):
     return finished
 
 
-def example_angular_action_movement(base):
-    print("Starting angular action movement ...")
-    action = Base_pb2.Action()
-    action.name = "Example angular action movement"
-    action.application_data = ""
-
-    actuator_count = base.GetActuatorCount()
-
-    # Place arm straight up
-    for joint_id in range(actuator_count.count):
-        joint_angle = action.reach_joint_angles.joint_angles.joint_angles.add()
-        joint_angle.joint_identifier = joint_id
-        joint_angle.value = 0
-
-    e = threading.Event()
-    notification_handle = base.OnNotificationActionTopic(
-        check_for_end_or_abort(e),
-        Base_pb2.NotificationOptions()
-    )
-
-    print("Executing action")
-    base.ExecuteAction(action)
-
-    print("Waiting for movement to finish ...")
-    finished = e.wait(TIMEOUT_DURATION)
-    base.Unsubscribe(notification_handle)
-
-    if finished:
-        print("Angular movement completed")
-    else:
-        print("Timeout on action notification wait")
-    return finished
-
-
-def example_cartesian_action_movement(base, base_cyclic):
-    print("Starting Cartesian action movement ...")
-    action = Base_pb2.Action()
-    action.name = "Example Cartesian action movement"
-    action.application_data = ""
-
-    feedback = base_cyclic.RefreshFeedback()
-
-    cartesian_pose = action.reach_pose.target_pose
-    cartesian_pose.x = feedback.base.tool_pose_x  # (meters)
-    cartesian_pose.y = feedback.base.tool_pose_y - 0.1  # (meters)
-    cartesian_pose.z = feedback.base.tool_pose_z - 0.2  # (meters)
-    cartesian_pose.theta_x = feedback.base.tool_pose_theta_x  # (degrees)
-    cartesian_pose.theta_y = feedback.base.tool_pose_theta_y  # (degrees)
-    cartesian_pose.theta_z = feedback.base.tool_pose_theta_z  # (degrees)
-
-    e = threading.Event()
-    notification_handle = base.OnNotificationActionTopic(
-        check_for_end_or_abort(e),
-        Base_pb2.NotificationOptions()
-    )
-
-    print("Executing action")
-    base.ExecuteAction(action)
-
-    print("Waiting for movement to finish ...")
-    finished = e.wait(TIMEOUT_DURATION)
-    base.Unsubscribe(notification_handle)
-
-    if finished:
-        print("Cartesian movement completed")
-    else:
-        print("Timeout on action notification wait")
-    return finished
-
-
-def example_create_sequence(base, base_cyclic):
+def create_sequence(base, actions, sequence_name):
     print("Creating Action for Sequence")
 
     actuator_count = base.GetActuatorCount().count
-    angular_action = create_angular_action(actuator_count)
-    cartesian_action = create_cartesian_action(base_cyclic)
 
     print("Creating Sequence")
     sequence = Base_pb2.Sequence()
-    sequence.name = "Example sequence"
+    sequence.name = sequence_name
+
+    list_aux = []
+    for action in actions:
+        angular_action = create_angular_action(actuator_count, action)
+        list_aux.append(angular_action)
 
     print("Appending Actions to Sequence")
     task_1 = sequence.tasks.add()
-    task_1.group_identifier = 0
-    task_1.action.CopyFrom(cartesian_action)
+    task_1.group_identifier = 1
+    task_1.action.CopyFrom(list_aux[0])
 
     task_2 = sequence.tasks.add()
-    task_2.group_identifier = 1  # sequence elements with same group_id are played at the same time
-    task_2.action.CopyFrom(angular_action)
+    task_2.group_identifier = 1  # Sequence elements with same group_id are played at the same time
+    task_2.action.CopyFrom(list_aux[1])
+
+    task_3 = sequence.tasks.add()
+    task_3.group_identifier = 1  # Sequence elements with same group_id are played at the same time
+    task_3.action.CopyFrom(list_aux[2])
+
+    task_4 = sequence.tasks.add()
+    task_4.group_identifier = 1  # Sequence elements with same group_id are played at the same time
+    task_4.action.CopyFrom(list_aux[3])
+
 
     e = threading.Event()
     notification_handle = base.OnNotificationSequenceInfoTopic(
@@ -239,7 +156,20 @@ def example_create_sequence(base, base_cyclic):
 
     print("Creating sequence on device and executing it")
     handle_sequence = base.CreateSequence(sequence)
-    base.PlaySequence(handle_sequence)
+
+    print("Moving the arm to a safe position")
+    sequence_list = base.ReadAllSequences()
+    print(sequence_list)
+    sequence_handle = None
+    for sequence in sequence_list.sequence_list:
+        if sequence.name == "vamola":
+            sequence_handle = sequence.handle
+
+    if sequence_handle is None:
+        print("Can't reach safe position. Exiting")
+        return False
+
+    base.PlaySequence(sequence_handle)
 
     print("Waiting for movement to finish ...")
     finished = e.wait(TIMEOUT_DURATION)
@@ -323,7 +253,6 @@ def example_send_joint_speeds(base):
 def main():
     # Import the utilities helper module
     sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
-    import utilities
 
     # Parse arguments
     args = utilities.parseConnectionArguments()
@@ -334,15 +263,20 @@ def main():
         base = BaseClient(router)
         base_cyclic = BaseCyclicClient(router)
 
+        # TODO: Decidir qual a saída de dados
+        actions = [[0.0, 0.0, 0.0, 0.0, 0.0, 0.0], [10.0, 10.0, 10.0, 10.0, 10.0, 10.0],
+                   [25.0, 25.0, 25.0, 25.0, 25.0, 25.0], [50.0, 50.0, 50.0, 50.0, 50.0, 50.0]]
+
         # Example core
         success = True
 
-        success &= example_move_to_home_position(base)
-        success &= example_cartesian_action_movement(base, base_cyclic)
-        success &= example_angular_action_movement(base)
-        success &= example_create_sequence(base, base_cyclic)
-        success &= example_twist_command(base)
-        success &= example_send_joint_speeds(base)
+        success &= move_to_position(base, position='Home')
+        success &= move_to_position(base, position='Zero')
+
+        # TODO: Tem que passar o objeto que contem os movimentos específicos
+        success &= create_sequence(base, actions, sequence_name='tecla1')
+
+        success &= move_to_position(base, position='Retract')
 
         # You can also refer to the 110-Waypoints examples if you want to execute
         # a trajectory defined by a series of waypoints in joint space or in Cartesian space
