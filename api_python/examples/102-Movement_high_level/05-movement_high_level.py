@@ -154,12 +154,11 @@ def create_sequence(base, actions, sequence_name):
         Base_pb2.NotificationOptions()
     )
 
-    print("Creating sequence on device and executing it")
-    handle_sequence = base.CreateSequence(sequence)
+    # print("Creating sequence on device and executing it")
+    # handle_sequence = base.CreateSequence(sequence)
 
     print("Moving the arm to a safe position")
     sequence_list = base.ReadAllSequences()
-    print(sequence_list)
     sequence_handle = None
     for sequence in sequence_list.sequence_list:
         if sequence.name == "vamola":
@@ -178,33 +177,6 @@ def create_sequence(base, actions, sequence_name):
     if not finished:
         print("Timeout on action notification wait")
     return finished
-
-
-def example_twist_command(base):
-    command = Base_pb2.TwistCommand()
-
-    command.reference_frame = Base_pb2.CARTESIAN_REFERENCE_FRAME_TOOL
-    command.duration = 0
-
-    twist = command.twist
-    twist.linear_x = 0
-    twist.linear_y = 0.03
-    twist.linear_z = 0
-    twist.angular_x = 0
-    twist.angular_y = 0
-    twist.angular_z = 5
-
-    print("Sending the twist command for 5 seconds...")
-    base.SendTwistCommand(command)
-
-    # Let time for twist to be executed
-    time.sleep(5)
-
-    print("Stopping the robot...")
-    base.Stop()
-    time.sleep(1)
-
-    return True
 
 
 def example_send_joint_speeds(base):
