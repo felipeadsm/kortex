@@ -4,13 +4,11 @@
 
 import sys
 import os
-import time
 import threading
 
 from kortex_api.autogen.client_stubs.BaseClientRpc import BaseClient
-from kortex_api.autogen.client_stubs.BaseCyclicClientRpc import BaseCyclicClient
 
-from kortex_api.autogen.messages import Base_pb2, BaseCyclic_pb2, Common_pb2
+from kortex_api.autogen.messages import Base_pb2
 
 from api_python.examples import utilities
 
@@ -21,7 +19,7 @@ TIMEOUT_DURATION = 20
 SPEED = 20.0
 
 
-# Create closure to set an event after an END or an ABORT
+# Create closure to set an event after an END or an ABORT 
 def check_for_end_or_abort(e):
     """Return a closure checking for END or ABORT notifications
 
@@ -116,53 +114,21 @@ def move_to_position(base, position):
     return finished
 
 
-def create_sequence(base, actions, sequence_name):
-    print("Creating Action for Sequence")
+# Função utilizada para recuperar uma sequeência da memória do robô e executa-la
+def play_sequence(base, position):
+    print("Moving the arm to a safe position")
 
-    actuator_count = base.GetActuatorCount().count
-
-    print("Creating Sequence")
-    sequence = Base_pb2.Sequence()
-    sequence.name = sequence_name
-
-    list_aux = []
-    for action in actions:
-        angular_action = create_angular_action(actuator_count, action)
-        list_aux.append(angular_action)
-
-    print("Appending Actions to Sequence")
-    task_1 = sequence.tasks.add()
-    task_1.group_identifier = 1
-    task_1.action.CopyFrom(list_aux[0])
-
-    task_2 = sequence.tasks.add()
-    task_2.group_identifier = 1  # Sequence elements with same group_id are played at the same time
-    task_2.action.CopyFrom(list_aux[1])
-
-    task_3 = sequence.tasks.add()
-    task_3.group_identifier = 1  # Sequence elements with same group_id are played at the same time
-    task_3.action.CopyFrom(list_aux[2])
-
-    task_4 = sequence.tasks.add()
-    task_4.group_identifier = 1  # Sequence elements with same group_id are played at the same time
-    task_4.action.CopyFrom(list_aux[3])
-
+    sequence_list = base.ReadAllSequences()
+    sequence_handle = None
+    for sequence in sequence_list.sequence_list:
+        if sequence.name == position:
+            sequence_handle = sequence.handle
 
     e = threading.Event()
     notification_handle = base.OnNotificationSequenceInfoTopic(
         check_for_sequence_end_or_abort(e),
         Base_pb2.NotificationOptions()
     )
-
-    # print("Creating sequence on device and executing it")
-    # handle_sequence = base.CreateSequence(sequence)
-
-    print("Moving the arm to a safe position")
-    sequence_list = base.ReadAllSequences()
-    sequence_handle = None
-    for sequence in sequence_list.sequence_list:
-        if sequence.name == "vamola":
-            sequence_handle = sequence.handle
 
     if sequence_handle is None:
         print("Can't reach safe position. Exiting")
@@ -179,49 +145,6 @@ def create_sequence(base, actions, sequence_name):
     return finished
 
 
-def example_send_joint_speeds(base):
-    joint_speeds = Base_pb2.JointSpeeds()
-
-    actuator_count = base.GetActuatorCount().count
-    # The 7DOF robot will spin in the same direction for 10 seconds
-    if actuator_count == 7:
-        speeds = [SPEED, 0, -SPEED, 0, SPEED, 0, -SPEED]
-        i = 0
-        for speed in speeds:
-            joint_speed = joint_speeds.joint_speeds.add()
-            joint_speed.joint_identifier = i
-            joint_speed.value = speed
-            joint_speed.duration = 0
-            i = i + 1
-        print("Sending the joint speeds for 10 seconds...")
-        base.SendJointSpeedsCommand(joint_speeds)
-        time.sleep(10)
-    # The 6 DOF robot will alternate between 4 spins, each for 2.5 seconds
-    if actuator_count == 6:
-        print("Sending the joint speeds for 10 seconds...")
-        for times in range(4):
-            del joint_speeds.joint_speeds[:]
-            if times % 2:
-                speeds = [-SPEED, 0.0, 0.0, SPEED, 0.0, 0.0]
-            else:
-                speeds = [SPEED, 0.0, 0.0, -SPEED, 0.0, 0.0]
-            i = 0
-            for speed in speeds:
-                joint_speed = joint_speeds.joint_speeds.add()
-                joint_speed.joint_identifier = i
-                joint_speed.value = speed
-                joint_speed.duration = 0
-                i = i + 1
-
-            base.SendJointSpeedsCommand(joint_speeds)
-            time.sleep(2.5)
-
-    print("Stopping the robot")
-    base.Stop()
-
-    return True
-
-
 def main():
     # Import the utilities helper module
     sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
@@ -233,11 +156,6 @@ def main():
     with utilities.DeviceConnection.createTcpConnection(args) as router:
         # Create required services
         base = BaseClient(router)
-        base_cyclic = BaseCyclicClient(router)
-
-        # TODO: Decidir qual a saída de dados
-        actions = [[0.0, 0.0, 0.0, 0.0, 0.0, 0.0], [10.0, 10.0, 10.0, 10.0, 10.0, 10.0],
-                   [25.0, 25.0, 25.0, 25.0, 25.0, 25.0], [50.0, 50.0, 50.0, 50.0, 50.0, 50.0]]
 
         # Example core
         success = True
@@ -245,13 +163,9 @@ def main():
         success &= move_to_position(base, position='Home')
         success &= move_to_position(base, position='Zero')
 
-        # TODO: Tem que passar o objeto que contem os movimentos específicos
-        success &= create_sequence(base, actions, sequence_name='tecla1')
+        success &= play_sequence(base, position='vamola')
 
         success &= move_to_position(base, position='Retract')
-
-        # You can also refer to the 110-Waypoints examples if you want to execute
-        # a trajectory defined by a series of waypoints in joint space or in Cartesian space
 
         return 0 if success else 1
 
