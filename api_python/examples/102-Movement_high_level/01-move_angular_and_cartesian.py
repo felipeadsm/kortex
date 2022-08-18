@@ -103,6 +103,7 @@ def example_angular_action_movement(base):
     )
 
     print("Executing action")
+    base.SendJointSpeedsCommand()
     base.ExecuteAction(action)
 
     print("Waiting for movement to finish ...")
@@ -170,7 +171,6 @@ def main():
         success = True
 
         success &= example_move_to_home_position(base)
-        success &= example_cartesian_action_movement(base, base_cyclic)
         success &= example_angular_action_movement(base)
 
         # You can also refer to the 110-Waypoints examples if you want to execute
