@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "kortex"
+version = "0.1.0"
+description = ""
+authors = ["Felipe Augusto <97059009+felipeadsm@users.noreply.github.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+kortex-api = {path = "kortex_api-2.3.0.post34-py3-none-any.whl"}
+
+[tool.poetry.dev-dependencies]
+ipython = "^8.12.0"
+
+[tool.poetry.group.doc.dependencies]
+mkdocs = "^1.4.3"
+mkdocs-material = "^9.1.0"
+mkdocstrings = "^0.20.0"
+mkdocstrings-python = "^0.8.3"
+pymdown-extensions = "^9.9.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

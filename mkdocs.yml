@@ -1,0 +1,336 @@
+site_name: Kortex
+
+nav:
+  - Kortex Api Reference: index.md
+  - Summary Pages:
+    - Introduction: bcap/introduction.md
+  - Messages:
+    - ActuatorConfig:
+      - AxisOffsets: messages/ActuatorConfig/AxisOffsets.md
+      - AxisPosition: messages/ActuatorConfig/AxisPosition.md
+      - CoggingFeedforwardModeInformation: messages/ActuatorConfig/CoggingFeedforwardModeInformation.md
+      - CommandModeInformation: messages/ActuatorConfig/CommandModeInformation.md
+      - ControlLoop: messages/ActuatorConfig/ControlLoop.md
+      - ControlLoopParameters: messages/ActuatorConfig/ControlLoopParameters.md
+      - ControlModeInformation: messages/ActuatorConfig/ControlModeInformation.md
+      - EncoderDerivativeParameters: messages/ActuatorConfig/EncoderDerivativeParameters.md
+      - FrequencyResponse: messages/ActuatorConfig/FrequencyResponse.md
+      - LoopSelection: messages/ActuatorConfig/LoopSelection.md
+      - PositionCommand: messages/ActuatorConfig/PositionCommand.md
+      - RampResponse: messages/ActuatorConfig/RampResponse.md
+      - Servoing: messages/ActuatorConfig/Servoing.md
+      - StepResponse: messages/ActuatorConfig/StepResponse.md
+      - TorqueCalibration: messages/ActuatorConfig/TorqueCalibration.md
+      - TorqueOffset: messages/ActuatorConfig/TorqueOffset.md
+      - VectorDriveParameters: messages/ActuatorConfig/VectorDriveParameters.md
+    - ActuatorCyclic:
+      - Command: messages/ActuatorCyclic/Command.md
+      - CustomData: messages/ActuatorCyclic/CustomData.md
+      - Feedback: messages/ActuatorCyclic/Feedback.md
+      - MessageId: messages/ActuatorCyclic/MessageId.md
+    - Base:
+      - ActionEvent: messages/Base/ActionEvent.md
+      - ActionType: messages/Base/ActionType.md
+      - AdmittanceMode: messages/Base/AdmittanceMode.md
+      - BackupEvent: messages/Base/BackupEvent.md
+      - BridgeStatus: messages/Base/BridgeStatus.md
+      - BridgeType: messages/Base/BridgeType.md
+      - CapSenseMode: messages/Base/CapSenseMode.md
+      - ConfigurationNotificationEvent: messages/Base/ConfigurationNotificationEvent.md
+      - ControllerBehavior: messages/Base/ControllerBehavior.md
+      - ControllerElementEventType: messages/Base/ControllerElementEventType.md
+      - ControllerEventType: messages/Base/ControllerEventType.md
+      - ControllerInputType: messages/Base/ControllerInputType.md
+      - ControllerType: messages/Base/ControllerType.md
+      - ControlMode: messages/Base/ControlMode.md
+      - EventIdSequenceInfoNotification: messages/Base/EventIdSequenceInfoNotification.md
+      - FactoryEvent: messages/Base/FactoryEvent.md
+      - Gen3GpioPinId: messages/Base/Gen3GpioPinId.md
+      - GpioAction: messages/Base/GpioAction.md
+      - GpioBehavior: messages/Base/GpioBehavior.md
+      - GpioPinPropertyFlags: messages/Base/GpioPinPropertyFlags.md
+      - GripperMode: messages/Base/GripperMode.md
+      - JointNavigationDirection: messages/Base/JointNavigationDirection.md
+      - JointTrajectoryConstraintType: messages/Base/JointTrajectoryConstraintType.md
+      - LedState: messages/Base/LedState.md
+      - LimitationType: messages/Base/LimitationType.md
+      - NavigationDirection: messages/Base/NavigationDirection.md
+      - NetworkEvent: messages/Base/NetworkEvent.md
+      - NetworkType: messages/Base/NetworkType.md
+      - OperatingMode: messages/Base/OperatingMode.md
+      - ProtectionZoneEvent: messages/Base/ProtectionZoneEvent.md
+      - RobotEvent: messages/Base/RobotEvent.md
+      - SafetyIdentifier: messages/Base/SafetyIdentifier.md
+      - ServiceVersion: messages/Base/ServiceVersion.md
+      - ServoingMode: messages/Base/ServoingMode.md
+      - ShapeType: messages/Base/ShapeType.md
+      - SignalQuality: messages/Base/SignalQuality.md
+      - SnapshotType: messages/Base/SnapshotType.md
+      - SoundType: messages/Base/SoundType.md
+      - TrajectoryContinuityMode: messages/Base/TrajectoryContinuityMode.md
+      - TrajectoryErrorIdentifier: messages/Base/TrajectoryErrorIdentifier.md
+      - TrajectoryErrorType: messages/Base/TrajectoryErrorType.md
+      - TrajectoryInfoType: messages/Base/TrajectoryInfoType.md
+      - UserEvent: messages/Base/UserEvent.md
+      - WifiEncryptionType: messages/Base/WifiEncryptionType.md
+      - WifiSecurityType: messages/Base/WifiSecurityType.md
+      - WrenchMode: messages/Base/WrenchMode.md
+      - WristDigitalInputIdentifier: messages/Base/WristDigitalInputIdentifier.md
+      - Xbox360AnalogInputIdentifier: messages/Base/Xbox360AnalogInputIdentifier.md
+      - Xbox360DigitalInputIdentifier: messages/Base/Xbox360DigitalInputIdentifier.md
+    - BaseCyclic:
+      - ServiceVersion: enums/BaseCyclic/ServiceVersion.md
+    - Common:
+      - ArmState: enums/Common/ArmState.md
+      - CartesianReferenceFrame: enums/Common/CartesianReferenceFrame.md
+      - CountryCodeIdentifier: enums/Common/CountryCodeIdentifier.md
+      - DeviceTypes: enums/Common/DeviceTypes.md
+      - NotificationType: enums/Common/NotificationType.md
+      - Permission: enums/Common/Permission.md
+      - SafetyStatusValue: enums/Common/SafetyStatusValue.md
+      - UARTParity: enums/Common/UARTParity.md
+      - UARTSpeed: enums/Common/UARTSpeed.md
+      - UARTStopBits: enums/Common/UARTStopBits.md
+      - UARTWordLength: enums/Common/UARTWordLength.md
+      - Unit: enums/Common/Unit.md
+    - ControlConfig:
+      - ControlConfigurationEvent: enums/ControlConfig/ControlConfigurationEvent.md
+      - ControlMode: enums/ControlConfig/ControlMode.md
+      - ServiceVersion: enums/ControlConfig/ServiceVersion.md
+    - DeviceConfig:
+      - CalibrationItem: enums/DeviceConfig/CalibrationItem.md
+      - CalibrationStatus: enums/DeviceConfig/CalibrationStatus.md
+      - CapSenseMode: enums/DeviceConfig/CapSenseMode.md
+      - RunModes: enums/DeviceConfig/RunModes.md
+      - SafetyLimitType: enums/DeviceConfig/SafetyLimitType.md
+      - ServiceVersion: enums/DeviceConfig/ServiceVersion.md
+    - DeviceManager:
+      - ServiceVersion: enums/DeviceManager/ServiceVersion.md
+    - GripperConfig:
+      - RobotiqGripperStatusFlags: enums/GripperConfig/RobotiqGripperStatusFlags.md
+      - SafetyIdentifier: enums/GripperConfig/SafetyIdentifier.md
+    - GripperCyclic:
+      - ServiceVersion: enums/GripperCyclic/ServiceVersion.md
+    - InterconnectConfig:
+      - EthernetDevice: enums/InterconnectConfig/EthernetDevice.md
+      - EthernetDuplex: enums/InterconnectConfig/EthernetDuplex.md
+      - EthernetSpeed: enums/InterconnectConfig/EthernetSpeed.md
+      - GPIOIdentifier: enums/InterconnectConfig/GPIOIdentifier.md
+      - GPIOMode: enums/InterconnectConfig/GPIOMode.md
+      - GPIOPull: enums/InterconnectConfig/GPIOPull.md
+      - GPIOValue: enums/InterconnectConfig/GPIOValue.md
+      - I2CDevice: enums/InterconnectConfig/I2CDevice.md
+      - I2CDeviceAddressing: enums/InterconnectConfig/I2CDeviceAddressing.md
+      - I2CMode: enums/InterconnectConfig/I2CMode.md
+      - I2CRegisterAddressSize: enums/InterconnectConfig/I2CRegisterAddressSize.md
+      - SafetyIdentifier: enums/InterconnectConfig/SafetyIdentifier.md
+      - ServiceVersion: enums/InterconnectConfig/ServiceVersion.md
+      - UARTPortId: enums/InterconnectConfig/UARTPortId.md
+    - InterconnectCyclic:
+      - ServiceVersion: enums/InterconnectCyclic/ServiceVersion.md
+    - ProductConfiguration:
+      - ArmLaterality: enums/ProductConfiguration/ArmLaterality.md
+      - BaseType: enums/ProductConfiguration/BaseType.md
+      - EndEffectorType: enums/ProductConfiguration/EndEffectorType.md
+      - InterfaceModuleType: enums/ProductConfiguration/InterfaceModuleType.md
+      - ModelId: enums/ProductConfiguration/ModelId.md
+      - VisionModuleType: enums/ProductConfiguration/VisionModuleType.md
+      - WristType: enums/ProductConfiguration/WristType.md
+    - Session:
+      - ServiceVersion: enums/Session/ServiceVersion.md
+    - VisionConfig:
+      - BitRate: enums/VisionConfig/BitRate.md
+      - FocusAction: enums/VisionConfig/FocusAction.md
+      - FrameRate: enums/VisionConfig/FrameRate.md
+      - Option: enums/VisionConfig/Option.md
+      - Resolution: enums/VisionConfig/Resolution.md
+      - Sensor: enums/VisionConfig/Sensor.md
+      - ServiceVersion: enums/VisionConfig/ServiceVersion.md
+      - VisionEvent: enums/VisionConfig/VisionEvent.md
+  - Enuns:
+    - ActuatorConfig:
+      - CoggingFeedforwardMode: enums/ActuatorConfig/CoggingFeedforwardMode.md
+      - CommandMode: enums/ActuatorConfig/CommandMode.md
+      - ControlLoopSelection: enums/ActuatorConfig/ControlLoopSelection.md
+      - ControlMode: enums/ActuatorConfig/ControlMode.md
+      - CustomDataIndex: enums/ActuatorConfig/CustomDataIndex.md
+      - SafetyIdentifierBankA: enums/ActuatorConfig/SafetyIdentifierBankA.md
+      - SafetyLimitType: enums/ActuatorConfig/SafetyLimitType.md
+      - ServiceVersion: enums/ActuatorConfig/ServiceVersion.md
+    - ActuatorCyclic:
+      - CommandFlags: enums/ActuatorCyclic/CommandFlags.md
+      - ServiceVersion: enums/ActuatorCyclic/ServiceVersion.md
+      - StatusFlags: enums/ActuatorCyclic/StatusFlags.md
+    - API:
+      - ErrorCodes: enums/API/ErrorCodes.md
+      - SubErrorCodes: enums/API/SubErrorCodes.md
+    - Base:
+      - ActionEvent: enums/Base/ActionEvent.md
+      - ActionType: enums/Base/ActionType.md
+      - AdmittanceMode: enums/Base/AdmittanceMode.md
+      - BackupEvent: enums/Base/BackupEvent.md
+      - BridgeStatus: enums/Base/BridgeStatus.md
+      - BridgeType: enums/Base/BridgeType.md
+      - CapSenseMode: enums/Base/CapSenseMode.md
+      - ConfigurationNotificationEvent: enums/Base/ConfigurationNotificationEvent.md
+      - ControllerBehavior: enums/Base/ControllerBehavior.md
+      - ControllerElementEventType: enums/Base/ControllerElementEventType.md
+      - ControllerEventType: enums/Base/ControllerEventType.md
+      - ControllerInputType: enums/Base/ControllerInputType.md
+      - ControllerType: enums/Base/ControllerType.md
+      - ControlMode: enums/Base/ControlMode.md
+      - EventIdSequenceInfoNotification: enums/Base/EventIdSequenceInfoNotification.md
+      - FactoryEvent: enums/Base/FactoryEvent.md
+      - Gen3GpioPinId: enums/Base/Gen3GpioPinId.md
+      - GpioAction: enums/Base/GpioAction.md
+      - GpioBehavior: enums/Base/GpioBehavior.md
+      - GpioPinPropertyFlags: enums/Base/GpioPinPropertyFlags.md
+      - GripperMode: enums/Base/GripperMode.md
+      - JointNavigationDirection: enums/Base/JointNavigationDirection.md
+      - JointTrajectoryConstraintType: enums/Base/JointTrajectoryConstraintType.md
+      - LedState: enums/Base/LedState.md
+      - LimitationType: enums/Base/LimitationType.md
+      - NavigationDirection: enums/Base/NavigationDirection.md
+      - NetworkEvent: enums/Base/NetworkEvent.md
+      - NetworkType: enums/Base/NetworkType.md
+      - OperatingMode: enums/Base/OperatingMode.md
+      - ProtectionZoneEvent: enums/Base/ProtectionZoneEvent.md
+      - RobotEvent: enums/Base/RobotEvent.md
+      - SafetyIdentifier: enums/Base/SafetyIdentifier.md
+      - ServiceVersion: enums/Base/ServiceVersion.md
+      - ServoingMode: enums/Base/ServoingMode.md
+      - ShapeType: enums/Base/ShapeType.md
+      - SignalQuality: enums/Base/SignalQuality.md
+      - SnapshotType: enums/Base/SnapshotType.md
+      - SoundType: enums/Base/SoundType.md
+      - TrajectoryContinuityMode: enums/Base/TrajectoryContinuityMode.md
+      - TrajectoryErrorIdentifier: enums/Base/TrajectoryErrorIdentifier.md
+      - TrajectoryErrorType: enums/Base/TrajectoryErrorType.md
+      - TrajectoryInfoType: enums/Base/TrajectoryInfoType.md
+      - UserEvent: enums/Base/UserEvent.md
+      - WifiEncryptionType: enums/Base/WifiEncryptionType.md
+      - WifiSecurityType: enums/Base/WifiSecurityType.md
+      - WrenchMode: enums/Base/WrenchMode.md
+      - WristDigitalInputIdentifier: enums/Base/WristDigitalInputIdentifier.md
+      - Xbox360AnalogInputIdentifier: enums/Base/Xbox360AnalogInputIdentifier.md
+      - Xbox360DigitalInputIdentifier: enums/Base/Xbox360DigitalInputIdentifier.md
+    - BaseCyclic:
+      - ServiceVersion: enums/BaseCyclic/ServiceVersion.md
+    - Common:
+      - ArmState: enums/Common/ArmState.md
+      - CartesianReferenceFrame: enums/Common/CartesianReferenceFrame.md
+      - CountryCodeIdentifier: enums/Common/CountryCodeIdentifier.md
+      - DeviceTypes: enums/Common/DeviceTypes.md
+      - NotificationType: enums/Common/NotificationType.md
+      - Permission: enums/Common/Permission.md
+      - SafetyStatusValue: enums/Common/SafetyStatusValue.md
+      - UARTParity: enums/Common/UARTParity.md
+      - UARTSpeed: enums/Common/UARTSpeed.md
+      - UARTStopBits: enums/Common/UARTStopBits.md
+      - UARTWordLength: enums/Common/UARTWordLength.md
+      - Unit: enums/Common/Unit.md
+    - ControlConfig:
+      - ControlConfigurationEvent: enums/ControlConfig/ControlConfigurationEvent.md
+      - ControlMode: enums/ControlConfig/ControlMode.md
+      - ServiceVersion: enums/ControlConfig/ServiceVersion.md
+    - DeviceConfig:
+      - CalibrationItem: enums/DeviceConfig/CalibrationItem.md
+      - CalibrationStatus: enums/DeviceConfig/CalibrationStatus.md
+      - CapSenseMode: enums/DeviceConfig/CapSenseMode.md
+      - RunModes: enums/DeviceConfig/RunModes.md
+      - SafetyLimitType: enums/DeviceConfig/SafetyLimitType.md
+      - ServiceVersion: enums/DeviceConfig/ServiceVersion.md
+    - DeviceManager:
+      - ServiceVersion: enums/DeviceManager/ServiceVersion.md
+    - GripperConfig:
+      - RobotiqGripperStatusFlags: enums/GripperConfig/RobotiqGripperStatusFlags.md
+      - SafetyIdentifier: enums/GripperConfig/SafetyIdentifier.md
+    - GripperCyclic:
+      - ServiceVersion: enums/GripperCyclic/ServiceVersion.md
+    - InterconnectConfig:
+      - EthernetDevice: enums/InterconnectConfig/EthernetDevice.md
+      - EthernetDuplex: enums/InterconnectConfig/EthernetDuplex.md
+      - EthernetSpeed: enums/InterconnectConfig/EthernetSpeed.md
+      - GPIOIdentifier: enums/InterconnectConfig/GPIOIdentifier.md
+      - GPIOMode: enums/InterconnectConfig/GPIOMode.md
+      - GPIOPull: enums/InterconnectConfig/GPIOPull.md
+      - GPIOValue: enums/InterconnectConfig/GPIOValue.md
+      - I2CDevice: enums/InterconnectConfig/I2CDevice.md
+      - I2CDeviceAddressing: enums/InterconnectConfig/I2CDeviceAddressing.md
+      - I2CMode: enums/InterconnectConfig/I2CMode.md
+      - I2CRegisterAddressSize: enums/InterconnectConfig/I2CRegisterAddressSize.md
+      - SafetyIdentifier: enums/InterconnectConfig/SafetyIdentifier.md
+      - ServiceVersion: enums/InterconnectConfig/ServiceVersion.md
+      - UARTPortId: enums/InterconnectConfig/UARTPortId.md
+    - InterconnectCyclic:
+      - ServiceVersion: enums/InterconnectCyclic/ServiceVersion.md
+    - ProductConfiguration:
+      - ArmLaterality: enums/ProductConfiguration/ArmLaterality.md
+      - BaseType: enums/ProductConfiguration/BaseType.md
+      - EndEffectorType: enums/ProductConfiguration/EndEffectorType.md
+      - InterfaceModuleType: enums/ProductConfiguration/InterfaceModuleType.md
+      - ModelId: enums/ProductConfiguration/ModelId.md
+      - VisionModuleType: enums/ProductConfiguration/VisionModuleType.md
+      - WristType: enums/ProductConfiguration/WristType.md
+    - Session:
+      - ServiceVersion: enums/Session/ServiceVersion.md
+    - VisionConfig:
+      - BitRate: enums/VisionConfig/BitRate.md
+      - FocusAction: enums/VisionConfig/FocusAction.md
+      - FrameRate: enums/VisionConfig/FrameRate.md
+      - Option: enums/VisionConfig/Option.md
+      - Resolution: enums/VisionConfig/Resolution.md
+      - Sensor: enums/VisionConfig/Sensor.md
+      - ServiceVersion: enums/VisionConfig/ServiceVersion.md
+      - VisionEvent: enums/VisionConfig/VisionEvent.md
+
+theme:
+  name: material
+  language: en
+  logo: assets/white.png
+  favicon: assets/white.png
+  palette:
+    - scheme: default
+      primary: custom
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - scheme: slate
+      primary: custom
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  features:
+    - navigation.path
+    - navigation.tabs
+    - navigation.tabs.sticky
+
+markdown_extensions:
+  - admonition
+  - pymdownx.caret
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.keys
+  - pymdownx.tasklist
+  - pymdownx.details
+  - pymdownx.emoji
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - tables
+plugins:
+  - search
+  - autorefs
+  - mkdocstrings:
+      enabled: !ENV [MKDOCS_ENABLE_MKDOCSTRINGS, true]
+      custom_templates: templates
+      default_handler: python
+      handlers:
+        python:
+          options:
+            docstring_style: google
+            show_source: false
+            show_docstring_examples: true
+            separate_signature: true
+
+extra_css:
+  - stylesheets/extra.css

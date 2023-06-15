@@ -1,0 +1,14 @@
+:root {
+  --md-primary-fg-color:        #62437f;
+  --md-primary-fg-color--light: #ECB7B7;
+  --md-primary-fg-color--dark:  #90030C;
+}
+
+table {
+  table-layout: fixed;
+  max-width: 100%;
+}
+
+.md-typeset code {
+  overflow-wrap: break-word;
+}

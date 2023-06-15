@@ -1,0 +1,5 @@
+
+rpython:S1192$"ZDefine a constant instead of duplicating this literal "Caught expected error: {}" 4 times.(¢òö¹
+€python:S1192#"cDefine a constant instead of duplicating this literal "Error_code:{} , Sub_error_code:{} " 4 times.(Õ²¢ñýÿÿÿÿ
+tpython:S117H"]Rename this local variable "input_IkData" to match the regular expression ^[_a-z][a-z0-9_]*$.(ŒÿìÅ
+npython:S117T"WRename this local variable "jAngle" to match the regular expression ^[_a-z][a-z0-9_]*$.(Æœžˆ

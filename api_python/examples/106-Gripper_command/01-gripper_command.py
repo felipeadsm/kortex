@@ -19,8 +19,9 @@ import time
 from kortex_api.autogen.client_stubs.BaseClientRpc import BaseClient
 from kortex_api.autogen.messages import Base_pb2
 
+
 class GripperCommandExample:
-    def __init__(self, router, proportional_gain = 2.0):
+    def __init__(self, router, proportional_gain=2.0):
 
         self.proportional_gain = proportional_gain
         self.router = router
@@ -47,7 +48,7 @@ class GripperCommandExample:
             time.sleep(1)
 
         # Set speed to open gripper
-        print ("Opening gripper using speed command...")
+        print("Opening gripper using speed command...")
         gripper_command.mode = Base_pb2.GRIPPER_SPEED
         finger.value = 0.1
         self.base.SendGripperCommand(gripper_command)
@@ -57,15 +58,15 @@ class GripperCommandExample:
         gripper_request.mode = Base_pb2.GRIPPER_POSITION
         while True:
             gripper_measure = self.base.GetMeasuredGripperMovement(gripper_request)
-            if len (gripper_measure.finger):
+            if len(gripper_measure.finger):
                 print("Current position is : {0}".format(gripper_measure.finger[0].value))
                 if gripper_measure.finger[0].value < 0.01:
                     break
-            else: # Else, no finger present in answer, end loop
+            else:  # Else, no finger present in answer, end loop
                 break
 
         # Set speed to close gripper
-        print ("Closing gripper using speed command...")
+        print("Closing gripper using speed command...")
         gripper_command.mode = Base_pb2.GRIPPER_SPEED
         finger.value = -0.1
         self.base.SendGripperCommand(gripper_command)
@@ -74,12 +75,15 @@ class GripperCommandExample:
         gripper_request.mode = Base_pb2.GRIPPER_SPEED
         while True:
             gripper_measure = self.base.GetMeasuredGripperMovement(gripper_request)
-            if len (gripper_measure.finger):
+            if len(gripper_measure.finger):
                 print("Current speed is : {0}".format(gripper_measure.finger[0].value))
                 if gripper_measure.finger[0].value == 0.0:
                     break
-            else: # Else, no finger present in answer, end loop
+            else:  # Else, no finger present in answer, end loop
                 break
+        print()
+        print(gripper_command)
+
 
 def main():
     # Import the utilities helper module
@@ -93,9 +97,9 @@ def main():
 
     # Create connection to the device and get the router
     with utilities.DeviceConnection.createTcpConnection(args) as router:
-
         example = GripperCommandExample(router)
         example.ExampleSendGripperCommands()
+
 
 if __name__ == "__main__":
     main()
