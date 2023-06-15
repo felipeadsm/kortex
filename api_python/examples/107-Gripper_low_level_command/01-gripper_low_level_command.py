@@ -96,8 +96,9 @@ obtained and used with Kortex API.
 This loop modulates the speed sent to the gripper.
 """
 
+
 class GripperLowLevelExample:
-    def __init__(self, router, router_real_time, proportional_gain = 2.0):
+    def __init__(self, router, router_real_time, proportional_gain=2.0):
         """
             GripperLowLevelExample class constructor.
 
@@ -180,7 +181,6 @@ class GripperLowLevelExample:
         # Restore servoing mode to the one that was in use before running the example
         self.base.SetServoingMode(self.previous_servoing_mode)
 
-
     def Goto(self, target_position):
         """
             Position gripper to a requested target position using a simple
@@ -225,7 +225,8 @@ class GripperLowLevelExample:
                 return False
             time.sleep(0.001)
         return True
- 
+
+
 def main():
     # Import the utilities helper module
     import argparse
@@ -252,11 +253,12 @@ def main():
                         break
                     elif ch >= '0' and ch <= '9':
                         target_position = (float(ch) + 1) * 10.0
-                        print("Going to position %i"%(target_position))
+                        print("Going to position %i" % (target_position))
                         example.Goto(target_position)
                         print("Target reached")
             time.sleep(0.2)
             example.Cleanup()
+
 
 if __name__ == "__main__":
     main()

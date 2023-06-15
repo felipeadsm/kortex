@@ -85,6 +85,7 @@ class GripperCommandExample:
         print(gripper_command)
 
 
+
 def main():
     # Import the utilities helper module
     import argparse
