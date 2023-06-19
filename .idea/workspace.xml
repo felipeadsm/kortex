@@ -1,465 +1,80 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AutoImportSettings">
-    <option name="autoReloadType" value="SELECTIVE" />
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="658754ed-92de-4f41-b061-b12780c51a2e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/api_python/examples/600 - rria_tests/clear_fault.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/assets/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/assets/residence_robot.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/assets/white.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/enums/ActuatorConfig/CoggingFeedforwardMode.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/enums/ActuatorConfig/CommandMode.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/enums/ActuatorConfig/ControlLoopSelection.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/enums/ActuatorConfig/ControlMode.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/enums/ActuatorConfig/CustomDataIndex.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/enums/ActuatorConfig/SafetyIdentifierBankA.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/enums/ActuatorConfig/SafetyLimitType.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/enums/ActuatorConfig/ServiceVersion.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/enums/ActuatorCyclic/CommandFlags.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/enums/ActuatorCyclic/ServiceVersion.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/enums/ActuatorCyclic/StatusFlags.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/enums/Api/ErrorCodes.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/enums/Api/SubErrorCodes.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/enums/Base/ActionEvent.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/enums/Base/ActionType.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/enums/Base/AdmittanceMode.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/enums/Base/BackupEvent.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/enums/Base/BridgeStatus.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/enums/Base/BridgeType.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/enums/Base/CapSenseMode.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/enums/Base/ConfigurationNotificationEvent.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/enums/Base/ControlMode.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/enums/Base/ControllerBehavior.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/enums/Base/ControllerElementEventType.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/enums/Base/ControllerEventType.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/enums/Base/ControllerInputType.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/enums/Base/ControllerType.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/enums/Base/EventIdSequenceInfoNotification.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/enums/Base/FactoryEvent.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/enums/Base/Gen3GpioPinId.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/enums/Base/GpioAction.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/enums/Base/GpioBehavior.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/enums/Base/GpioPinPropertyFlags.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/enums/Base/GripperMode.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/enums/Base/JointNavigationDirection.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/enums/Base/JointTrajectoryConstraintType.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/enums/Base/LedState.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/enums/Base/LimitationType.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/enums/Base/NavigationDirection.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/enums/Base/NetworkEvent.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/enums/Base/NetworkType.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/enums/Base/OperatingMode.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/enums/Base/ProtectionZoneEvent.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/enums/Base/RobotEvent.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/enums/Base/SafetyIdentifier.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/enums/Base/ServiceVersion.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/enums/Base/ServoingMode.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/enums/Base/ShapeType.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/enums/Base/SignalQuality.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/enums/Base/SnapshotType.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/enums/Base/SoundType.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/enums/Base/TrajectoryContinuityMode.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/enums/Base/TrajectoryErrorIdentifier.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/enums/Base/TrajectoryErrorType.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/enums/Base/TrajectoryInfoType.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/enums/Base/UserEvent.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/enums/Base/WifiEncryptionType.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/enums/Base/WifiSecurityType.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/enums/Base/WrenchMode.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/enums/Base/WristDigitalInputIdentifier.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/enums/Base/Xbox360AnalogInputIdentifier.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/enums/Base/Xbox360DigitalInputIdentifier.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/enums/BaseCyclic/ServiceVersion.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/enums/Common/ArmState.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/enums/Common/CartesianReferenceFrame.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/enums/Common/CountryCodeIdentifier.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/enums/Common/DeviceTypes.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/enums/Common/NotificationType.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/enums/Common/Permission.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/enums/Common/SafetyStatusValue.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/enums/Common/UARTParity.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/enums/Common/UARTSpeed.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/enums/Common/UARTStopBits.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/enums/Common/UARTWordLength.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/enums/Common/Unit.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/enums/ControlConfig/ControlConfigurationEvent.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/enums/ControlConfig/ControlMode.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/enums/ControlConfig/ServiceVersion.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/enums/DeviceConfig/CalibrationItem.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/enums/DeviceConfig/CalibrationStatus.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/enums/DeviceConfig/CapSenseMode.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/enums/DeviceConfig/RunModes.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/enums/DeviceConfig/SafetyLimitType.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/enums/DeviceConfig/ServiceVersion.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/enums/DeviceManager/ServiceVersion.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/enums/GripperConfig/RobotiqGripperStatusFlags.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/enums/GripperConfig/SafetyIdentifier.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/enums/GripperCyclic/ServiceVersion.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/enums/InterconnectConfig/EthernetDevice.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/enums/InterconnectConfig/EthernetDuplex.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/enums/InterconnectConfig/EthernetSpeed.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/enums/InterconnectConfig/GPIOIdentifier.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/enums/InterconnectConfig/GPIOMode.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/enums/InterconnectConfig/GPIOPull.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/enums/InterconnectConfig/GPIOValue.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/enums/InterconnectConfig/I2CDevice.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/enums/InterconnectConfig/I2CDeviceAddressing.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/enums/InterconnectConfig/I2CMode.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/enums/InterconnectConfig/I2CRegisterAddressSize.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/enums/InterconnectConfig/SafetyIdentifier.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/enums/InterconnectConfig/ServiceVersion.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/enums/InterconnectConfig/UARTPortId.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/enums/InterconnectCyclic/ServiceVersion.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/enums/ProductConfiguration/ArmLaterality.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/enums/ProductConfiguration/BaseType.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/enums/ProductConfiguration/EndEffectorType.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/enums/ProductConfiguration/InterfaceModuleType.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/enums/ProductConfiguration/ModelId.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/enums/ProductConfiguration/VisionModuleType.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/enums/ProductConfiguration/WristType.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/enums/Session/ServiceVersion.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/enums/VisionConfig/BitRate.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/enums/VisionConfig/FocusAction.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/enums/VisionConfig/FrameRate.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/enums/VisionConfig/Option.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/enums/VisionConfig/Resolution.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/enums/VisionConfig/Sensor.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/enums/VisionConfig/ServiceVersion.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/enums/VisionConfig/VisionEvent.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/index.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/ActuatorConfig/AxisOffsets.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/ActuatorConfig/AxisPosition.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/ActuatorConfig/CoggingFeedforwardModeInformation.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/ActuatorConfig/CommandModeInformation.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/ActuatorConfig/ControlLoop.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/ActuatorConfig/ControlLoopParameters.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/ActuatorConfig/ControlModeInformation.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/ActuatorConfig/CustomDataSelection.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/ActuatorConfig/EncoderDerivativeParameters.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/ActuatorConfig/FrequencyResponse.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/ActuatorConfig/LoopSelection.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/ActuatorConfig/PositionCommand.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/ActuatorConfig/RampResponse.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/ActuatorConfig/Servoing.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/ActuatorConfig/StepResponse.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/ActuatorConfig/TorqueCalibration.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/ActuatorConfig/TorqueOffset.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/ActuatorConfig/VectorDriveParameters.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/ActuatorCyclic/Command.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/ActuatorCyclic/CustomData.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/ActuatorCyclic/Feedback.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/ActuatorCyclic/MessageId.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/Action.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/ActionExecutionState.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/ActionHandle.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/ActionList.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/ActionNotification.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/ActionNotificationList.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/ActivateMapHandle.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/ActuatorInformation.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/Admittance.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/AdvancedSequenceHandle.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/AngularWaypoint.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/AppendActionInformation.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/ArmStateInformation.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/ArmStateNotification.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/BluetoothEnableState.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/BridgeConfig.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/BridgeIdentifier.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/BridgeList.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/BridgePortConfig.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/BridgeResult.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/CapSenseConfig.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/CartesianLimitation.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/CartesianLimitationList.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/CartesianSpeed.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/CartesianTrajectoryConstraint.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/CartesianWaypoint.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/ChangeJointSpeeds.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/ChangeTwist.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/ChangeWrench.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/CommunicationInterfaceConfiguration.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/ConfigurationChangeNotification.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/ConfigurationChangeNotificationList.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/ConstrainedJointAngle.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/ConstrainedJointAngles.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/ConstrainedOrientation.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/ConstrainedPose.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/ConstrainedPosition.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/ControlModeInformation.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/ControlModeNotification.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/ControlModeNotificationList.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/ControllerConfiguration.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/ControllerConfigurationList.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/ControllerConfigurationMode.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/ControllerElementHandle.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/ControllerElementState.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/ControllerEvent.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/ControllerHandle.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/ControllerList.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/ControllerNotification.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/ControllerNotificationList.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/ControllerState.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/Delay.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/EmergencyStop.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/FactoryNotification.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/Faults.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/Finger.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/FirmwareBundleVersions.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/FirmwareComponentVersion.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/FullIPv4Configuration.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/FullUserProfile.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/GpioCommand.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/GpioConfiguration.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/GpioConfigurationList.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/GpioEvent.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/GpioPinConfiguration.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/Gripper.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/GripperCommand.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/GripperRequest.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/IKData.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/IPv4Configuration.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/IPv4Information.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/JointAngle.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/JointAngles.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/JointLimitation.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/JointSpeed.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/JointSpeeds.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/JointTorque.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/JointTorques.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/JointTrajectoryConstraint.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/JointsLimitationsList.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/KinematicTrajectoryConstraints.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/Map.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/MapElement.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/MapEvent.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/MapGroup.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/MapGroupHandle.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/MapGroupList.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/MapHandle.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/MapList.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/Mapping.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/MappingHandle.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/MappingInfoNotification.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/MappingInfoNotificationList.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/MappingList.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/NetworkHandle.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/NetworkNotification.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/NetworkNotificationList.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/OperatingModeInformation.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/OperatingModeNotification.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/OperatingModeNotificationList.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/Orientation.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/PasswordChange.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/Point.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/Pose.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/Position.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/PreComputedJointTrajectory.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/PreComputedJointTrajectoryElement.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/ProtectionZone.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/ProtectionZoneHandle.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/ProtectionZoneInformation.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/ProtectionZoneList.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/ProtectionZoneNotification.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/ProtectionZoneNotificationList.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/Query.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/RFConfiguration.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/RequestedActionType.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/RobotEventNotification.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/RobotEventNotificationList.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/RotationMatrix.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/RotationMatrixRow.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/SafetyEvent.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/SafetyNotificationList.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/Sequence.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/SequenceHandle.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/SequenceInfoNotification.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/SequenceInfoNotificationList.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/SequenceInformation.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/SequenceList.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/SequenceTask.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/SequenceTaskConfiguration.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/SequenceTaskHandle.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/SequenceTasks.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/SequenceTasksConfiguration.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/SequenceTasksPair.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/SequenceTasksRange.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/ServoingModeInformation.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/ServoingModeNotification.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/ServoingModeNotificationList.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/Snapshot.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/Ssid.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/Stop.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/SwitchControlMapping.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/SystemTime.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/Timeout.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/TrajectoryErrorElement.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/TrajectoryErrorReport.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/TrajectoryInfo.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/TransformationMatrix.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/TransformationRow.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/Twist.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/TwistCommand.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/TwistLimitation.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/UserList.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/UserNotification.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/UserNotificationList.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/UserProfile.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/UserProfileList.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/Waypoint.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/WaypointList.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/WaypointValidationReport.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/WifiConfiguration.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/WifiConfigurationList.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/WifiEnableState.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/WifiInformation.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/WifiInformationList.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/Wrench.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/WrenchCommand.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/WrenchLimitation.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Base/ZoneShape.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/BaseCyclic/ActuatorCommand.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/BaseCyclic/ActuatorCustomData.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/BaseCyclic/ActuatorFeedback.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/BaseCyclic/BaseFeedback.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/BaseCyclic/Command.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/BaseCyclic/CustomData.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/BaseCyclic/Feedback.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Common/Connection.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Common/CountryCode.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Common/DeviceHandle.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Common/Empty.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Common/NotificationHandle.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Common/NotificationOptions.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Common/SafetyHandle.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Common/SafetyNotification.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Common/Timestamp.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Common/UARTConfiguration.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Common/UARTDeviceIdentification.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Common/UserProfileHandle.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/ControlConfig/AngularTwist.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/ControlConfig/CartesianReferenceFrameInfo.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/ControlConfig/CartesianTransform.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/ControlConfig/ControlConfigurationNotification.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/ControlConfig/ControlModeInformation.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/ControlConfig/ControlModeNotification.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/ControlConfig/DesiredSpeeds.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/ControlConfig/GravityVector.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/ControlConfig/JointAccelerationSoftLimits.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/ControlConfig/JointSpeedSoftLimits.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/ControlConfig/JointSpeeds.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/ControlConfig/KinematicLimits.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/ControlConfig/KinematicLimitsList.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/ControlConfig/LinearTwist.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/ControlConfig/PayloadInformation.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/ControlConfig/Position.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/ControlConfig/ToolConfiguration.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/ControlConfig/TwistAngularSoftLimit.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/ControlConfig/TwistLinearSoftLimit.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/DeviceConfig/BootloaderVersion.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/DeviceConfig/Calibration.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/DeviceConfig/CalibrationElement.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/DeviceConfig/CalibrationParameter.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/DeviceConfig/CalibrationResult.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/DeviceConfig/CapSenseConfig.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/DeviceConfig/CapSenseRegister.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/DeviceConfig/DeviceType.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/DeviceConfig/FirmwareVersion.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/DeviceConfig/IPv4Settings.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/DeviceConfig/MACAddress.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/DeviceConfig/ModelNumber.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/DeviceConfig/PartNumber.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/DeviceConfig/PartNumberRevision.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/DeviceConfig/PowerOnSelfTestResult.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/DeviceConfig/RebootRqst.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/DeviceConfig/RunMode.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/DeviceConfig/SafetyConfiguration.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/DeviceConfig/SafetyConfigurationList.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/DeviceConfig/SafetyEnable.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/DeviceConfig/SafetyInformation.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/DeviceConfig/SafetyInformationList.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/DeviceConfig/SafetyStatus.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/DeviceConfig/SafetyThreshold.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/DeviceConfig/SerialNumber.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/DeviceManager/DeviceHandles.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/GripperCyclic/Command.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/GripperCyclic/CustomData.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/GripperCyclic/CustomDataUnit.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/GripperCyclic/Feedback.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/GripperCyclic/MessageId.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/GripperCyclic/MotorCommand.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/GripperCyclic/MotorFeedback.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/InterconnectConfig/EthernetConfiguration.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/InterconnectConfig/EthernetDeviceIdentification.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/InterconnectConfig/GPIOConfiguration.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/InterconnectConfig/GPIOIdentification.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/InterconnectConfig/GPIOState.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/InterconnectConfig/I2CConfiguration.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/InterconnectConfig/I2CData.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/InterconnectConfig/I2CDeviceIdentification.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/InterconnectConfig/I2CReadParameter.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/InterconnectConfig/I2CReadRegisterParameter.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/InterconnectConfig/I2CWriteParameter.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/InterconnectConfig/I2CWriteRegisterParameter.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/InterconnectCyclic/Command.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/InterconnectCyclic/CustomData.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/InterconnectCyclic/Feedback.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/InterconnectCyclic/MessageId.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/ProductConfiguration/CompleteProductConfiguration.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/ProductConfiguration/ProductConfigurationEndEffectorType.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Session/ConnectionList.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/Session/CreateSessionInfo.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/VisionConfig/DistortionCoefficients.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/VisionConfig/ExtrinsicParameters.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/VisionConfig/FocusPoint.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/VisionConfig/IntrinsicParameters.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/VisionConfig/IntrinsicProfileIdentifier.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/VisionConfig/ManualFocus.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/VisionConfig/OptionIdentifier.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/VisionConfig/OptionInformation.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/VisionConfig/OptionValue.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/VisionConfig/RotationMatrix.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/VisionConfig/RotationMatrixRow.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/VisionConfig/SensorFocusAction.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/VisionConfig/SensorIdentifier.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/VisionConfig/SensorSettings.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/VisionConfig/TranslationVector.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/messages/VisionConfig/VisionNotification.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/stylesheets/extra.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/summary_pages/ActuatorConfig.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/summary_pages/ActuatorCyclic.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/summary_pages/Api.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/summary_pages/Base.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/summary_pages/BaseCyclic.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/summary_pages/Common.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/summary_pages/ControlConfig.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/summary_pages/DeviceConfig.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/summary_pages/DeviceManager.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/summary_pages/GripperConfig.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/summary_pages/GripperCyclic.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/summary_pages/InterconnectConfig.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/summary_pages/InterconnectCyclic.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/summary_pages/ProductConfiguration.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/summary_pages/Session.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/summary_pages/VisionConfig.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kortex_api-2.3.0.post34-py3-none-any.whl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api_python/examples/000-Getting_Started/05-notification.py" beforeDir="false" afterPath="$PROJECT_DIR$/api_python/examples/000-Getting_Started/05-notification.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api_python/examples/106-Gripper_command/01-gripper_command.py" beforeDir="false" afterPath="$PROJECT_DIR$/api_python/examples/106-Gripper_command/01-gripper_command.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api_python/examples/utilities.py" beforeDir="false" afterPath="$PROJECT_DIR$/api_python/examples/utilities.py" afterDir="false" />
+    <list default="true" id="f85b2ecd-cd48-48c6-be1c-15d187b62e5b" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/kortex.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/2/025e54fdc5aff58f316663df79fa8f9b82d698f6" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/5/059ef4aa681dadcd21c3bf483a41fc8288b9e496" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/9/09083b8a7aa67e02c20f89e3d74655a25d475461" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/b/0b7f0532c4838526375eb34f1430dbc3c07a2c29" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/6/26e079e7a2c0ed0fcc28cec0c7c51a282655997c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/7/275d783e298228506068436512433d343feb52aa" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/0/40fabcac6e9041552a6d5d2ef81c008091140bb9" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/6/462d00df6b2c0a4e89446b689a35f2ea66f7afdc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/c/4cb2dc8c1bbf0331432bdc05df9d6beb47e934e6" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/f/4f4c380c5ed1d26e2a987d3bdcba6583bb30ba3a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/4/5498e04b517fa1ea53c15d8d04c613b0c8b0f4c2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/4/54ff2102f03ff9f143491ddb58163fd6878b71d9" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/8/589434ed9eb1f9daeeb6ad12d1197e1273fd6acc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/d/5d9e7872f9bc5173882727318cc891cd93131431" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/6/6609f424c268a1aa06c27b14aee69cc77bf045d9" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/7/67bc2e2dcdfec174e145de03496ff8921d892fd6" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/9/69b7fb69e85ae5375ae1a3adb88591368e771219" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/d/6d51c74cbf349327f4757ba41821e342c77a5651" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/d/6daeb2f654412b5f567683106d7e1eb313fa0192" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/6/76fa7a2d8e04b9bd9c61f37c1681a82025e000d7" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/7/97b4ad15bee2511d67985758515422fbdaa6ee1d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/7/a7d742d41d1a88bceacdeedd6e863b06c07b2fb2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/d/ad2b9a2326d4c88ee190f5ec5bdd649cad5ceaf4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/0/d0d8245e67e7f8ff2410a53cddcbd919f030b99f" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/a/da4323053aab58a337c8994bfe52e1791cf9ed7c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/b/dbf1cc9607b58e6570f8630fd72f12af81fe6515" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/e/ee2ee7c7e42bd13a77c29fbc9ce825c0f466c4a5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/8/f8d57911124fb6cf1471fbb2ebcbd9720ad6dae8" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/9/f9c79d8fd09b4a84ecfe28ea82b38f46777eb539" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/0/2/025e54fdc5aff58f316663df79fa8f9b82d698f6" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/0/5/059ef4aa681dadcd21c3bf483a41fc8288b9e496" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/0/9/09083b8a7aa67e02c20f89e3d74655a25d475461" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/0/b/0b7f0532c4838526375eb34f1430dbc3c07a2c29" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/2/6/26e079e7a2c0ed0fcc28cec0c7c51a282655997c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/2/7/275d783e298228506068436512433d343feb52aa" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/4/0/40fabcac6e9041552a6d5d2ef81c008091140bb9" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/4/6/462d00df6b2c0a4e89446b689a35f2ea66f7afdc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/4/c/4cb2dc8c1bbf0331432bdc05df9d6beb47e934e6" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/4/f/4f4c380c5ed1d26e2a987d3bdcba6583bb30ba3a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/5/4/5498e04b517fa1ea53c15d8d04c613b0c8b0f4c2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/5/4/54ff2102f03ff9f143491ddb58163fd6878b71d9" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/5/8/589434ed9eb1f9daeeb6ad12d1197e1273fd6acc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/5/d/5d9e7872f9bc5173882727318cc891cd93131431" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/6/6/6609f424c268a1aa06c27b14aee69cc77bf045d9" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/6/7/67bc2e2dcdfec174e145de03496ff8921d892fd6" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/6/9/69b7fb69e85ae5375ae1a3adb88591368e771219" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/6/d/6d51c74cbf349327f4757ba41821e342c77a5651" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/6/d/6daeb2f654412b5f567683106d7e1eb313fa0192" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/7/6/76fa7a2d8e04b9bd9c61f37c1681a82025e000d7" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/9/7/97b4ad15bee2511d67985758515422fbdaa6ee1d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/a/7/a7d742d41d1a88bceacdeedd6e863b06c07b2fb2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/a/d/ad2b9a2326d4c88ee190f5ec5bdd649cad5ceaf4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/d/0/d0d8245e67e7f8ff2410a53cddcbd919f030b99f" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/d/a/da4323053aab58a337c8994bfe52e1791cf9ed7c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/d/b/dbf1cc9607b58e6570f8630fd72f12af81fe6515" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/e/e/ee2ee7c7e42bd13a77c29fbc9ce825c0f466c4a5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/f/8/f8d57911124fb6cf1471fbb2ebcbd9720ad6dae8" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/f/9/f9c79d8fd09b4a84ecfe28ea82b38f46777eb539" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Python Script" />
-      </list>
-    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -467,129 +82,33 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="2QsQvmOxM86RXsc5MPouVWGQSSb" />
+  <component name="ProjectId" id="2RR06S51bsh3YUIwzeHQFuHuPBI" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/fasm.CINSOFTEX/Documents/GitHub/kortex/docs",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
+    "last_opened_file_path": "C:/Users/fasm/AppData/Roaming/Python/Scripts/poetry.exe",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\fasm.CINSOFTEX\Documents\GitHub\kortex\docs" />
-      <recent name="C:\Users\fasm.CINSOFTEX\Documents\GitHub\kortex" />
-    </key>
-  </component>
-  <component name="RunManager" selected="Python.01-gripper_command">
-    <configuration name="01-gripper_command" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="kortex" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/api_python/examples/106-Gripper_command" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/api_python/examples/106-Gripper_command/01-gripper_command.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="05-notification" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="kortex" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/api_python/examples/000-Getting_Started" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/api_python/examples/000-Getting_Started/05-notification.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="clear_fault" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="kortex" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/api_python/examples/600 - rria_tests" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/api_python/examples/600 - rria_tests/clear_fault.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Python.01-gripper_command" />
-        <item itemvalue="Python.clear_fault" />
-        <item itemvalue="Python.05-notification" />
-      </list>
-    </recent_temporary>
-  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="658754ed-92de-4f41-b061-b12780c51a2e" name="Changes" comment="" />
-      <created>1686140041370</created>
+      <changelist id="f85b2ecd-cd48-48c6-be1c-15d187b62e5b" name="Changes" comment="" />
+      <created>1687197411270</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1686140041370</updated>
-      <workItem from="1686140042402" duration="2853000" />
-      <workItem from="1686586933742" duration="329000" />
-      <workItem from="1686587539810" duration="12363000" />
-      <workItem from="1686741825058" duration="6168000" />
+      <updated>1687197411270</updated>
+      <workItem from="1687197413683" duration="266000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/kortex$clear_fault.coverage" NAME="clear_fault Coverage Results" MODIFIED="1686682839477" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api_python/examples/600 - rria_tests" />
-    <SUITE FILE_PATH="coverage/kortex$01_gripper_command.coverage" NAME="01-gripper_command Coverage Results" MODIFIED="1686683556467" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api_python/examples/106-Gripper_command" />
-    <SUITE FILE_PATH="coverage/kortex$05_notification.coverage" NAME="05-notification Coverage Results" MODIFIED="1686660104696" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api_python/examples/000-Getting_Started" />
   </component>
 </project>
