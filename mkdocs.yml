@@ -1,7 +1,8 @@
 site_name: Kortex
 
 nav:
-  - Kortex Api Reference: index.md
+  - Home: index.md
+  - Kortex Api Reference: kortex_api_references.md
   - Summary Pages:
       - ActuatorConfig: summary_pages/ActuatorConfig.md
       - ActuatorCyclic: summary_pages/ActuatorCyclic.md
