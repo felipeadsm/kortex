@@ -14,13 +14,17 @@
 
 import sys
 import os
-import time
 import threading
+import time
 
 from kortex_api.autogen.client_stubs.BaseClientRpc import BaseClient
 from kortex_api.autogen.client_stubs.BaseCyclicClientRpc import BaseCyclicClient
-
 from kortex_api.autogen.messages import Base_pb2, BaseCyclic_pb2, Common_pb2
+
+from api_python.examples import utilities
+
+from api_python.examples.rria_api.emergency_stop_func import emergency_stop
+from api_python.examples.rria_api.emergency_stop import EmergencyStop
 
 # Maximum allowed waiting time during actions (in seconds)
 TIMEOUT_DURATION = 20
@@ -82,7 +86,7 @@ def example_move_to_home_position(base):
     return finished
 
 
-def example_angular_action_movement(base):
+def example_angular_action_movement(base, joint_list):
     print("Starting angular action movement ...")
     action = Base_pb2.Action()
     action.name = "Example angular action movement"
@@ -91,10 +95,10 @@ def example_angular_action_movement(base):
     actuator_count = base.GetActuatorCount()
 
     # Place arm straight up
-    for joint_id in range(actuator_count.count):
+    for joint_id in range(len(joint_list)):
         joint_angle = action.reach_joint_angles.joint_angles.joint_angles.add()
         joint_angle.joint_identifier = joint_id
-        joint_angle.value = 0
+        joint_angle.value = joint_list[joint_id]
 
     e = threading.Event()
     notification_handle = base.OnNotificationActionTopic(
@@ -103,7 +107,6 @@ def example_angular_action_movement(base):
     )
 
     print("Executing action")
-    base.SendJointSpeedsCommand()
     base.ExecuteAction(action)
 
     print("Waiting for movement to finish ...")
@@ -153,10 +156,14 @@ def example_cartesian_action_movement(base, base_cyclic):
     return finished
 
 
+def clear_faults(base):
+    base.ClearFaults()
+    return True
+
+
 def main():
     # Import the utilities helper module
     sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
-    import utilities
 
     # Parse arguments
     args = utilities.parseConnectionArguments()
@@ -167,15 +174,25 @@ def main():
         base = BaseClient(router)
         base_cyclic = BaseCyclicClient(router)
 
+        # Teste de parada de emergência
+        stop_emergency = EmergencyStop(base)
+        stop_emergency.emergency_stop()
+
         # Example core
         success = True
 
+        # limpa faltas
+        clear_faults(base)
+
         success &= example_move_to_home_position(base)
-        success &= example_angular_action_movement(base)
+        success &= example_angular_action_movement(base, [0, 0, 0, 0, 0, 0])
+        success &= example_angular_action_movement(base, [30, 30, 30, 30, 30, 30])
+        success &= example_angular_action_movement(base, [0, 0, 0, 0, 0, 0])
+        success &= example_angular_action_movement(base, [30, 30, 30, 30, 30, 30])
+        success &= example_move_to_home_position(base)
 
         # You can also refer to the 110-Waypoints examples if you want to execute
         # a trajectory defined by a series of waypoints in joint space or in Cartesian space
-
         return 0 if success else 1
 
 
