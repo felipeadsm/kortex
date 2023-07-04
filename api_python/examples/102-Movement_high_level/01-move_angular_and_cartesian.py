@@ -15,15 +15,12 @@
 import sys
 import os
 import threading
-import time
 
 from kortex_api.autogen.client_stubs.BaseClientRpc import BaseClient
 from kortex_api.autogen.client_stubs.BaseCyclicClientRpc import BaseCyclicClient
 from kortex_api.autogen.messages import Base_pb2, BaseCyclic_pb2, Common_pb2
 
 from api_python.examples import utilities
-
-from api_python.examples.rria_api.emergency_stop_func import emergency_stop
 from api_python.examples.rria_api.emergency_stop import EmergencyStop
 
 # Maximum allowed waiting time during actions (in seconds)
@@ -31,7 +28,7 @@ TIMEOUT_DURATION = 20
 
 
 # Create closure to set an event after an END or an ABORT
-def check_for_end_or_abort(e):
+def check_for_end_or_abort(event_to_signal):
     """Return a closure checking for END or ABORT notifications
 
     Arguments:
@@ -39,11 +36,9 @@ def check_for_end_or_abort(e):
         (will be set when an END or ABORT occurs)
     """
 
-    def check(notification, e=e):
-        print("EVENT : " + \
-              Base_pb2.ActionEvent.Name(notification.action_event))
-        if notification.action_event == Base_pb2.ACTION_END \
-                or notification.action_event == Base_pb2.ACTION_ABORT:
+    def check(notification, e=event_to_signal):
+        print("EVENT : " + Base_pb2.ActionEvent.Name(notification.action_event))
+        if notification.action_event == Base_pb2.ACTION_END or notification.action_event == Base_pb2.ACTION_ABORT:
             e.set()
 
     return check
@@ -65,7 +60,7 @@ def example_move_to_home_position(base):
         if action.name == "Home":
             action_handle = action.handle
 
-    if action_handle == None:
+    if action_handle is None:
         print("Can't reach safe position. Exiting")
         return False
 
@@ -158,6 +153,7 @@ def example_cartesian_action_movement(base, base_cyclic):
 
 def clear_faults(base):
     base.ClearFaults()
+
     return True
 
 
@@ -174,14 +170,14 @@ def main():
         base = BaseClient(router)
         base_cyclic = BaseCyclicClient(router)
 
-        # Teste de parada de emergência
+        # Emergency stop event monitoring
         stop_emergency = EmergencyStop(base)
         stop_emergency.emergency_stop()
 
         # Example core
         success = True
 
-        # limpa faltas
+        # Clean faults
         clear_faults(base)
 
         success &= example_move_to_home_position(base)

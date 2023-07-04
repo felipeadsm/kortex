@@ -10,6 +10,7 @@ python = "^3.9"
 kortex-api = {path = "kortex_api-2.3.0.post34-py3-none-any.whl"}
 keyboard = "^0.13.5"
 pynput = "^1.7.6"
+pyniryo = "^1.1.2"
 
 [tool.poetry.dev-dependencies]
 ipython = "^8.12.0"
