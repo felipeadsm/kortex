@@ -25,9 +25,7 @@ The repository has been tested on Windows 10, Ubuntu 16.04, Ubuntu 18.04 and Ubu
 - [Description](#description)
 - [Licensing](#licensing)
 - [Role of Google Protocol Buffer in Kortex API](#role-of-google-protocol-buffer-in-kortex-api)
-  - [Quick Start for C++ users](#quick-start-for-c-users)
   - [Quick Start for Python users](#quick-start-for-python-users)
-  - [Quick Start for modbus users](#quick-start-for-modbus-users)
 - [Download links](#download-links)
 - [Build and Run instructions](#build-and-run-instructions)
 
@@ -76,7 +74,6 @@ The latest download links for each arm type are reported in the table below:
 
 | Arm type       | Firmware     | Release notes      | API |
 | :------------- | :----------: | :-----------: | :-----------:|
-|  Gen3 | [2.4.0](https://artifactory.kinovaapps.com/ui/api/v1/download?repoKey=generic-public&path=kortex%2Fgen3%2F2.4.0%2FGen3-2.4.0.swu)   | [2.5.0](https://artifactory.kinovaapps.com/ui/api/v1/download?repoKey=generic-public&path=Documentation%2FGen3%2FTechnical%20documentation%2FRelease%20notes%2FEN-eRN-001-Gen3-Ultralight-release-notes.pdf)    | [2.5.0](https://artifactory.kinovaapps.com/ui/repos/tree/General/generic-public/kortex/API/2.5.0/)|
 | Gen3 lite   | [2.3.2](https://artifactory.kinovaapps.com/ui/api/v1/download?repoKey=generic-public&path=kortex%2Fgen3Lite%2F2.3.2%2FGen3-lite-2.3.2.swu) | [2.3.2](https://artifactory.kinovaapps.com/ui/api/v1/download?repoKey=generic-public&path=Documentation%2FGen3%20lite%2FTechnical%20documentation%2FRelease%20Notes%2FGen3_lite_Release_Notes_2_3_2%20-%20R01.pdf) | [2.3.0](https://artifactory.kinovaapps.com/ui/native/generic-public/kortex/API/2.3.0/kortex_api-2.3.0.post34-py3-none-any.whl)|
 
 When following the link to Artifactory, to download the correct C++ API, you have to select the package for your architecture on the left-hand side tree view and then click Download on the right-hand side:
